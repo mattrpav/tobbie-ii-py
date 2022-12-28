@@ -32,6 +32,18 @@ def tobbieii_rotate_stop():
     pin15.write_digital(0)
     pin16.write_digital(0)
 
+def tobbieii_infared_enable():
+    pin12.write_digital(1)
+
+def tobbieii_infared_disable():
+    pin12.write_digital(0)
+
+def tobbieii_infared_right():
+    return pin1.read_analog()
+    
+def tobbieii_infared_left():
+    return pin2.read_analog()
+    
 while True:
     display.scroll('Hello, World!')
     display.show(Image.HEART)
